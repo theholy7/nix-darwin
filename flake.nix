@@ -46,8 +46,7 @@
         # Finder settings
         finder.AppleShowAllExtensions = true;
         finder.FXPreferredViewStyle = "clmv";
-
-      }
+      };
 
 
       # Set Git commit hash for darwin-version.
