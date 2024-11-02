@@ -18,6 +18,12 @@
         pkgs.oh-my-zsh
       ];
 
+      environment.shellAliases = {
+        ll = "ls -l";
+        gst = "git status";
+        ndr = "darwin-rebuild switch --flake .";
+      };
+
       # Auto upgrade nix package and the daemon service.
       services.nix-daemon.enable = true;
       # nix.package = pkgs.nix;
