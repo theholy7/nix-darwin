@@ -36,12 +36,11 @@
 
       # MacOS System configuration
       system.defaults = {
-
         # Dock settings
         dock.orientation = "right";
         dock.autohide = true;
         dock.minimize-to-application = true;
-        dock.show-recents = "false";
+        dock.show-recents = false;
 
         # Finder settings
         finder.AppleShowAllExtensions = true;
