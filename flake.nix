@@ -27,8 +27,25 @@
       # programs.fish.enable = true;
 
       # Enable zsh settings
+      programs.zsh.enable = true;
+      programs.zsh.enableSyntaxHighlighting = true;
       programs.zsh.enableFzfHistory = true;
       programs.zsh.enableFzfGit = true;
+
+      # MacOS System configuration
+      system.defaults = {
+
+        # Dock settings
+        dock.orientation = "right";
+        dock.autohide = true;
+        dock.minimize-to-application = true;
+        dock.show-recents = "false";
+
+        # Finder settings
+        finder.AppleShowAllExtensions = true;
+        finder.FXPreferredViewStyle = "clmv";
+
+      }
 
 
       # Set Git commit hash for darwin-version.
