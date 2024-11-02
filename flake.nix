@@ -19,15 +19,13 @@
       ];
 
       fonts = {
-          packages = with pkgs; [
-            fira-code # Monospace font with programming ligatures
-            fira-code-nerdfont # Iconic font aggregator, collection, & patcher. 3,600+ icons, 50+ patched fonts
-          ];
-        };
+        packages = with pkgs; [
+          fira-code # Monospace font with programming ligatures
+          fira-code-nerdfont # Iconic font aggregator, collection, & patcher. 3,600+ icons, 50+ patched fonts
+        ];
+      };
 
       environment.shellAliases = {
-        ll = "ls -l";
-        gst = "git status";
         ndr = "darwin-rebuild switch --flake .";
       };
 
@@ -46,6 +44,17 @@
       programs.zsh.enableSyntaxHighlighting = true;
       programs.zsh.enableFzfHistory = true;
       programs.zsh.enableFzfGit = true;
+      programs.zsh.interactiveShellInit = ''
+        export ZSH=${pkgs.oh-my-zsh}/share/oh-my-zsh/
+
+        # Customize your oh-my-zsh options here
+        ZSH_THEME="apple"
+        plugins=(git)
+
+        source $ZSH/oh-my-zsh.sh
+      '';
+
+      programs.zsh.promptInit = ""; # Clear this to avoid a conflict with oh-my-zsh
 
       # MacOS System configuration
       system.defaults = {
