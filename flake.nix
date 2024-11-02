@@ -18,6 +18,13 @@
         pkgs.oh-my-zsh
       ];
 
+      fonts = {
+          packages = with pkgs; [
+            fira-code # Monospace font with programming ligatures
+            fira-code-nerdfont # Iconic font aggregator, collection, & patcher. 3,600+ icons, 50+ patched fonts
+          ];
+        };
+
       environment.shellAliases = {
         ll = "ls -l";
         gst = "git status";
