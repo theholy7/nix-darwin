@@ -24,6 +24,8 @@
             pkgs.fzf
             pkgs.oh-my-zsh
             pkgs.nixfmt-rfc-style
+            pkgs.poetry
+            pkgs.pyenv
           ];
 
           fonts = {
